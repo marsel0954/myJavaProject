@@ -24,7 +24,7 @@ public class hw3 {
             this.telephone = telephone;
         }
 
-        public static void main(String[] args) {
+        public void main(String[] args) {
             sotrudnik[] sst = new sotrudnik[5];
             sst[0] = new sotrudnik("ivanov", "ivan", "ivanovich", "rtt1@mail.ru",
                     50000, 44, "s1", "22222");
