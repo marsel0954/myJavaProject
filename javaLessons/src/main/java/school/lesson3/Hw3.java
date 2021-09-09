@@ -1,4 +1,5 @@
 package school.lesson3;
+import java.util.Arrays;
 // 1.	Создать класс "Сотрудник" с полями: ФИО, должность, email, телефон, зарплата, возраст.
 //2.	Конструктор класса должен заполнять эти поля при создании объекта.
 //3.	Внутри класса «Сотрудник» написать метод, который выводит информацию об объекте в консоль.
@@ -39,12 +40,12 @@ public class Hw3 {
                     60000, 33, "s2", "22222");
             sst[4] = new sotrudnik("antonov", "anton", "ivanovich", "r12tt@mail.ru",
                     44000, 22, "m3", "22222");
-            for (int i = 0; i < sst.length; i++)
-                if (sst[i].vozrast > 40) {
-                    System.out.println("фамилия " + sst[i].familiya + " должность " + sst[i].dolzhnost);
-
+            for (sotrudnik sotrudnik : sst)
+                if (sotrudnik.vozrast > 40) {
+                    System.out.println("данные " + sotrudnik.familiya);
                     // не могу вывести значение массива через println(sst[i])
                 }
         }
+
+        }
     }
-}
