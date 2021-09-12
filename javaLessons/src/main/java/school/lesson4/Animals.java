@@ -8,13 +8,12 @@ import javax.sql.rowset.CachedRowSet;
 //3. 	У каждого животного есть ограничения на действия (бег: кот 200 м., собака 500 м.;
 //      плавание: кот не умеет плавать, собака 10 м.).
 //4. 	* Добавить подсчет созданных котов, собак и животных
-
+//
 public class Animals {
     String name;
     String beg;
     String begmax;
     String swim;
-   // int schet = 0;
     public Animals() {
     }
     public Animals(String name){
@@ -23,9 +22,6 @@ public class Animals {
     public void AnimalsInfo(){
         System.out.println("кто: " + name);
     }
- // public void SchetAnimals(){
- //       System.out.println("количество животных: " + schet);
- //   }
 }
 class Dogs extends Animals {
     String color;
@@ -57,15 +53,15 @@ class Cats extends Animals {
 }
 class AnimalDan {
     public static void main(String[] args) {
+        int schet = 0;
         Animals animal = new Animals("домашние животные");
         Cats cat = new Cats("Мурзик","короткая"," 150м", "200м","не умеет плавать");
-       // schet++;
+        schet++;
         Dogs dog = new Dogs("Мухтар","коричневый"," 150м","500м", "10м");
-       // schet++;
+        schet++;
         animal.AnimalsInfo();
         cat.CatsInfo();
         dog.DogsInfo();
-       // animal.SchetAnimals();
-
+        System.out.println("количество " + schet);
     }
 }
