@@ -15,7 +15,7 @@ public class Practice {
    private String[][] size = new String[r1][r2];
    private int[][] arr = new int[r1][r2];
 
-    public void Massive() {
+    public String[][] massive() {
         for (int i = 0; i < size.length; i++) {
             for (int j = 0; j < size[i].length; j++) {
                 if ((i + j) % 2 == 0) size[i][j] = "1";
@@ -23,17 +23,19 @@ public class Practice {
                 System.out.print(size[i][j] + " ");
             }
             System.out.println();
-        }
+        } return size;
     }
-    public void ToInt(String size[][]) {
-        int i = 0;
-        int j = 0;
-        arr[i][j] = Integer.parseInt(size[i][j]);
-        for (i = 0; i < arr.length; i++) {
-            for (j = 0; j < arr[i].length; j++) ;
-        }
+    public int[][] toInt() {
+        massive();
+      //  arr[i][j] = Integer.parseInt(size[i][j]);
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < r1; j++) {
+                arr[i][j] = Integer.parseInt(size[i][j]);
+            }
+        } return arr;
     }
-    public int summMass(int arr[][]){
+    public int summMass(){
+        toInt();
         int summ=0;
         for (int i=0;i< arr.length;i++){
             for(int j=0;j< arr[i].length;j++){
@@ -46,9 +48,8 @@ public class Practice {
 
     public static void main(String[] args) {
         Practice ss =  new Practice();
-        ss.Massive();
-        ss.ToInt(ss.size);
-        ss.summMass(ss.arr);
+
+        ss.summMass();
     }
 }
 
