@@ -10,6 +10,8 @@ package school.lesson6;
 
 import java.util.Arrays;
 public class Homework6 {
+
+
     public static void main(String[] args) {
         int r1 = 4;
         int r2 = 4;
@@ -22,12 +24,12 @@ public class Homework6 {
                 else size[i][j] = "4";
                 {
                     arr[i][j] = Integer.parseInt(size[i][j]);
-                        {
-                            sum= sum + arr[i][j];
-                        }
-                        System.out.println(" cумма " + sum);
+                    {
+                        sum+=arr[i][j];
                     }
+
                 }
             }
-        }
+        }System.out.println(" cумма " + sum);
     }
+}
