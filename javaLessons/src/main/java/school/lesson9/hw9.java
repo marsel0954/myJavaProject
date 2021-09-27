@@ -22,6 +22,7 @@ public class hw9 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         driver.get("https://crm-trainee-react-dev.andersenlab.dev/login");
+
         WebElement login = driver.findElement(By.id("login"));
         login.sendKeys("m.gazizov@andersenlab.com");
         WebElement password = driver.findElement(By.id("pass"));
@@ -33,11 +34,12 @@ public class hw9 {
         arrowBar.click();
        WebElement myprofile1 = driver.findElement(By.className("sidebarOption_option-text__27eEt"));
         myprofile1.click();
- /*        WebElement myprofilepop = driver.findElement(By.className("popupMenu_option__3ZD4c"));
-        myprofilepop.click();*/
+        WebElement myprofilepop = driver.findElement(By.className("popupMenu_option__3ZD4c"));
+        myprofilepop.click();
+
 
         try {
-            Thread.sleep(4000);
+            Thread.sleep(7000);
             driver.quit();
         } catch (InterruptedException e) {
             e.printStackTrace();
