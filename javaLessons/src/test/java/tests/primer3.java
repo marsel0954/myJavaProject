@@ -4,14 +4,13 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import school.primer.LoginPage;
 
-public class primer2 {
+public class primer3 {
     LoginPage Loginpage = new LoginPage();
 
     @Test
     public void inputLP() {
-        Loginpage.inputLP("huntflow-test-16@andersenlab.com","159753CFThn");
-       // Assertions.assertEquals(Loginpage.IconTop(),);
-
+        Loginpage.inputLP("222","23123123123");
+        Loginpage.EyeButton();
         Loginpage.driverQuit();
     }
 }

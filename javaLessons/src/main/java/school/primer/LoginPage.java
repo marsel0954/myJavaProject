@@ -10,6 +10,8 @@ public class LoginPage extends InitDriverPrimer {
     public static final By LOGIN = By.id("login");
     public static final By ERRORLOGIN = By.xpath("//*[@id=\"root\"]/div/div/form/div[1]/div/span");
     public static final By IMAGETOPBAR = By.xpath("//*[@id=\"root\"]/div/nav/div/a/svg");
+    public static final By EYEBUTTON = By.className("passwordInput_eye__261I6");
+
     WebDriver driver = InitDriverPrimer();
 
     public void inputLP(String login, String password){
@@ -17,6 +19,9 @@ public class LoginPage extends InitDriverPrimer {
         driver.findElement(PASSWORD).sendKeys(password);
         driver.findElement(LOGIN_BUTTON).click();
 
+    }
+    public void EyeButton(){
+        driver.findElement(EYEBUTTON).click();
     }
     public String ErrorAnswer(){
         String er1 = driver.findElement(ERRORLOGIN).getAttribute("innerText");
