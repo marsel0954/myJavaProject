@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Assertions;
 import school.primer.InitDriverPrimer;
 import school.primer.LoginPage;
 
-public class primer2 {
+public class primer5 {
     LoginPage loginPage = new LoginPage(InitDriverPrimer.getDriver());
 
-    @Test //АВТОРИЗАЦИЯ ПОЛЬЗОВАТЕЛЯ
+    @Test // ПОИСК ЭДЕМЕНТА НА СТРАНИЦЕ АВТОРИЗАЦИИ
     public void inputLP() {
-        loginPage.inputLP("huntflow-test-16@andersenlab.com","159753CFThn");
-        Assertions.assertEquals(true,loginPage.firstPage());
+        Assertions.assertEquals(true,loginPage.findButton());
         loginPage.driverQuit();
+
     }
 }

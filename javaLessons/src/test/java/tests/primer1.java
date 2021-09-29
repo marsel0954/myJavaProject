@@ -2,15 +2,16 @@ package tests;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import school.primer.InitDriverPrimer;
 import school.primer.LoginPage;
 
 public class primer1 {
-    LoginPage Loginpage = new LoginPage();
+    LoginPage loginPage = new LoginPage(InitDriverPrimer.getDriver());
 
-    @Test
+    @Test //ПРОВЕРКА ОБРАБОТКИ ОЩИБКИ НЕПРАВИЛЬНОГО ЛОГИНА
     public void inputLP() {
-        Loginpage.inputLP("222","23123123123");
-        Assertions.assertEquals(Loginpage.ErrorAnswer(),"Введите корпоративную почту Andersen");
-        Loginpage.driverQuit();
+        loginPage.inputLP("222","23123123123");
+        Assertions.assertEquals(loginPage.errorAnswer(),"Введите корпоративную почту Andersen");
+        loginPage.driverQuit();
     }
 }

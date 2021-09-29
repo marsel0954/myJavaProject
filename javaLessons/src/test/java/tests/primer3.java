@@ -2,15 +2,16 @@ package tests;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import school.primer.InitDriverPrimer;
 import school.primer.LoginPage;
 
 public class primer3 {
-    LoginPage Loginpage = new LoginPage();
+    LoginPage loginPage = new LoginPage(InitDriverPrimer.getDriver());
 
-    @Test
+    @Test //ОТОБРАЖЕНИЕ ФУНКЦИОНАЛЬНОСТИ КНОПКИ "ГЛАЗИК" НА СТРАНИЦЕ АВТОРИЗАЦИИ
     public void inputLP() {
-        Loginpage.inputLP("222","23123123123");
-        Loginpage.EyeButton();
-        Loginpage.driverQuit();
+        loginPage.inputLP("222","23123123123");
+        loginPage.eyeButton();
+        loginPage.driverQuit();
     }
 }
